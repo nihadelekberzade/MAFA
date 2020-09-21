@@ -6,22 +6,22 @@ import React, { useState } from 'react'
 
 
 export default function Service(props) {
-    const [isActive, setActive] = useState(false);
-
-
 
     return (
-        <div className='service'>
+        <div
+            className={`service 
+        ${props.index === props.activeIndex ? "active" : ""}`}
+        >
             <a
-                onClick={() => { setActive(!isActive) }}
-                className={`service__title ${isActive ? "active" : ""}`}
+                className='service__title'
+                onClick={() => props.onClick(props.index)}
             >
                 {props.title}
             </a>
 
 
             <div
-                className={`service__text ${isActive ? "active" : ""}`}
+                className='service__text'
             >
                 <span
                     className='service__subtitle-1'

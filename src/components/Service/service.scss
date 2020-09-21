@@ -4,15 +4,14 @@
     color: #fff;
     max-width: 400px;
 
-
     &__title {
         display: inline-block;
-        cursor: pointer;
         font-size: 30px;
         line-height: 35.6px;
         letter-spacing: -0.025em;
         font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
         transition: color .5s ease;
+        cursor: pointer;
     }
     &__title::after {
             content: ' ';
@@ -37,7 +36,7 @@
     }
 }
 
-div.active {
+.service.active > .service__text {
     height: 100px;
 }
 

@@ -23,8 +23,8 @@
   width: 66px;
   height: 22.23px;
   position: fixed;
-  left: 10px;
-  top: 16.685px;
+  left: 20px;
+  top: 26.685px;
 }
 
 .sidebar .header__menu-link {
@@ -32,8 +32,8 @@
   line-height: 35.6px;
   font-size: 20px;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   letter-spacing: -0.025em;
   font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
 }

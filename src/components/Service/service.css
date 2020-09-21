@@ -12,13 +12,13 @@
 
 .service__title {
   display: inline-block;
-  cursor: pointer;
   font-size: 30px;
   line-height: 35.6px;
   letter-spacing: -0.025em;
   font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
   -webkit-transition: color .5s ease;
   transition: color .5s ease;
+  cursor: pointer;
 }
 
 .service__title::after {
@@ -45,7 +45,7 @@
   font-weight: 100;
 }
 
-div.active {
+.service.active > .service__text {
   height: 100px;
 }
 /*# sourceMappingURL=service.css.map */

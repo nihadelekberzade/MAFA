@@ -1,72 +1,91 @@
 import './home.css'
-import React from 'react'
+import React, { useState } from 'react'
 import Service from '../Service/Service'
 
 export default function Home() {
 
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    let clickHandler = (index) => {
+        console.log('salam');
+        index = 3;
+        index === activeIndex ? setActiveIndex(null) : setActiveIndex(3);
+    }
 
 
     return (
         <div className='home'>
-            <div className='container home__container'>
-                <ul className='service-list'>
-                    <li>
-                        <Service
-                            title='web-design'
-                            subtitle1='
+            <ul className='home__service-list'>
+                <li>
+                    <Service
+                        title='web-design'
+                        subtitle1='
                 Сайт — это не продукт ради продукта, а составляющая ва
                 шего общего бизнес-концепта.
                 '
-                            subtitle2='
-                Мы понимаем это и делаем так
-                е сайты, 
+                        subtitle2='
+                Мы понимаем это и делаем такие сайты, 
                 которые помогают сделать 
                 ваш бизнес лучше.
                 '
-                        />
-                    </li>
-                    <li>
-                        <Service title='web-design'
-                            subtitle1='
+                        activeIndex={activeIndex}
+                        index={0}
+                        onClick={() => clickHandler()}
+                    />
+                </li>
+                <li>
+                    <Service title='web-design'
+                        subtitle1='
                 Сайт — это не продукт ради продукта, а составляющая вашего общего бизнес-концепта.
                 '
-                            subtitle2='
+                        subtitle2='
                 Мы понимаем это и делаем такие сайты, которые помогают сделать ваш бизнес лучше.
                 '
-                        />
-                    </li>
-                    <li>
-                        <Service title='web-design'
-                            subtitle1='
+                activeIndex={activeIndex}
+                        index={1}
+                        onClick={() => clickHandler}
+                    />
+                </li>
+                <li>
+                    <Service title='web-design'
+                        subtitle1='
                 Сайт — это не продукт ради продукта, а составляющая вашего общего бизнес-концепта.
                 '
-                            subtitle2='
+                        subtitle2='
                 Мы понимаем это и делаем такие сайты, которые помогают сделать ваш бизнес лучше.
                 '
-                        />
-                    </li>
-                    <li>
-                        <Service title='web-design'
-                            subtitle1='
+                activeIndex={activeIndex}
+                        index={2}
+                        onClick={() => clickHandler}
+                    />
+                </li>
+                <li>
+                    <Service title='web-design'
+                        subtitle1='
                 Сайт — это не продукт ради продукта, а составляющая вашего общего бизнес-концепта.
                 '
-                            subtitle2='
+                        subtitle2='
                 Мы понимаем это и делаем такие сайты, которые помогают сделать ваш бизнес лучше.
                 '
-                        />
-                    </li>
-                    <li>
-                        <Service title='web-design'
-                            subtitle1='
+                activeIndex={activeIndex}
+                        index={3}
+                        onClick={() => clickHandler}
+                    />
+                </li>
+                <li>
+                    <Service title='web-design'
+                        subtitle1='
                 Сайт — это не продукт ради продукта, а составляющая вашего общего бизнес-концепта.
                 '
-                            subtitle2='
+                        subtitle2='
                 Мы понимаем это и делаем такие сайты, которые помогают сделать ваш бизнес лучше.
                 '
-                        />
-                    </li>
-                </ul>
-            </div>
+                activeIndex={activeIndex}
+                        index={4}
+                        onClick={() => clickHandler}
+                    />
+                </li>
+            </ul>
         </div>
     )
 }
