@@ -2,16 +2,16 @@ import './home.css'
 import React, { useState } from 'react'
 import Service from '../Service/Service'
 
-export default function Home() {
 
+
+export default function Home() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     let clickHandler = (index) => {
-        console.log(index);
         index === activeIndex ? setActiveIndex(null) : setActiveIndex(index);
     }
 
-    
+
 
     return (
         <div className='home'>

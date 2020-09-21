@@ -8,30 +8,30 @@ import {images} from '../../img/images'
 
 export default function Team() {
 
-    const team  = [
-        {
-            name:'ДМИТРИЙ МУЗЫЧКА',
-            profession:'head of front end',
-            src:images.dimaM,
-            linkedin:'https://www.linkedin.com/in/nihad-elekberzade-550959185/',
-            email:'elekberzadeh333@gmail.com'
-        },
-        {
-            name:'ДМИТРИЙ ЗАПИСОЧНЫЙ',
-            profession:'head of front end',
-            src:images.dimaZ,
-            linkedin:'https://www.linkedin.com/in/nihad-elekberzade-550959185/',
-            email:'elekberzadeh333@gmail.com'
-        },
-        {
-            name:'ДМИТРИЙ ЗАПИСОЧНЫЙ',
-            profession:'head of front end',
-            src:images.dimaM,
-            linkedin:'https://www.linkedin.com/in/nihad-elekberzade-550959185/',
-            email:'elekberzadeh333@gmail.com'
-        },
+    // const team  = [
+    //     {
+    //         name:'ДМИТРИЙ МУЗЫЧКА',
+    //         profession:'head of front end',
+    //         src:images.dimaM,
+    //         linkedin:'https://www.linkedin.com/in/nihad-elekberzade-550959185/',
+    //         email:'elekberzadeh333@gmail.com'
+    //     },
+    //     {
+    //         name:'ДМИТРИЙ ЗАПИСОЧНЫЙ',
+    //         profession:'head of front end',
+    //         src:images.dimaZ,
+    //         linkedin:'https://www.linkedin.com/in/nihad-elekberzade-550959185/',
+    //         email:'elekberzadeh333@gmail.com'
+    //     },
+    //     {
+    //         name:'ДМИТРИЙ ЗАПИСОЧНЫЙ',
+    //         profession:'head of front end',
+    //         src:images.dimaM,
+    //         linkedin:'https://www.linkedin.com/in/nihad-elekberzade-550959185/',
+    //         email:'elekberzadeh333@gmail.com'
+    //     },
 
-    ]
+    // ]
 
 
     return (

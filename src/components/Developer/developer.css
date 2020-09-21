@@ -7,7 +7,7 @@
   margin-bottom: 10px;
 }
 
-.developer__info {
+.developer .info {
   background: #000;
   color: #fff;
   position: absolute;
@@ -16,7 +16,7 @@
   padding-left: 10px;
 }
 
-.developer__info .name {
+.developer .info .name {
   text-transform: uppercase;
   letter-spacing: -0.025em;
   font-family: 'TTFirs-Black';
@@ -25,7 +25,7 @@
   line-height: 25px;
 }
 
-.developer__info .name:after {
+.developer .info .name:after {
   content: "";
   width: 23px;
   height: 1px;
@@ -35,13 +35,32 @@
   left: -25px;
 }
 
-.developer__info footer {
+.developer .info footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.developer .info footer .icon {
+  color: #fff;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.developer .info footer .icon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.developer .info footer .email {
+  padding: 0 15px 0 10px;
 }
 
 .developer__email-icon {

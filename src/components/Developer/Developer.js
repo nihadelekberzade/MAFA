@@ -6,22 +6,28 @@ import React from 'react'
 export default function Developer(props) {
     return (
         <div className='developer'>
-            
-            <img 
-            src={props.src}
-            className='developer__img'>
 
+            <img
+                src={props.src}
+                className='img'>
             </img>
 
-            <div className='developer__info'>
+            <div className='info'>
                 <div className='name'>{props.name}</div>
 
                 <footer>
                     <span className='profession'>{props.profession}</span>
 
                     <div className='social-links'>
-                        <i className="fab fa-linkedin-in developer__linkedin-icon"></i>
-                        <i className="far fa-envelope developer__email-icon"></i>
+                        <a href={props.linkedin}>
+                            <i className="fab fa-linkedin-in linkedin icon"></i>
+
+                        </a>
+                        <a href={props.email}>
+                            <i className="far fa-envelope email icon"></i>
+                        </a>
+
+
                     </div>
                 </footer>
 
