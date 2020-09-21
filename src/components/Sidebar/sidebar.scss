@@ -1,0 +1,40 @@
+$padding:10px;
+.sidebar {
+    width: 0;
+    height: 100vh !important;
+    background: #fff;
+    text-align: right;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    transition: width .5s ease;
+
+    .white {color: #fff !important;}
+    .black {color: #000 !important;}
+    
+    
+    .header {
+        &__logo {
+            width: 66px;
+            height: 22.23px;
+            position: fixed;
+            left: $padding;
+            top: $padding+6.685px;
+        }
+        &__menu-link {
+            text-transform: uppercase;
+            line-height: 35.6px;
+            font-size: 20px;
+            position: fixed;
+            top: $padding;
+            right: $padding;
+            letter-spacing: -0.025em;
+            font-family: 
+            'TTFirs-ExtraBold','Arial','sans-serif';
+        }
+    }
+
+    
+}
+.sidebar.active {width: 100%;}

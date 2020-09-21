@@ -1,0 +1,45 @@
+.service {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    max-width: 400px;
+
+
+    &__title {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 30px;
+        line-height: 35.6px;
+        letter-spacing: -0.025em;
+        font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
+        transition: color .5s ease;
+    }
+    &__title::after {
+            content: ' ';
+            display: inline-block;
+            width: 20px;
+            margin: 0 5px;
+            border-bottom: 1px solid green;
+            height: 1px;
+    }
+    
+    &__text {
+        overflow: hidden;
+        height: 0;
+        transition: height .5s ease;
+        transform-origin: bottom;
+    }
+    
+    span {
+        line-height: 20px;
+        letter-spacing: 0px;
+        font-weight: 100;
+    }
+}
+
+div.active {
+    height: 100px;
+}
+
+
+

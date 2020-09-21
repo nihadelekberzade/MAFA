@@ -1,0 +1,51 @@
+.service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  max-width: 400px;
+}
+
+.service__title {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 35.6px;
+  letter-spacing: -0.025em;
+  font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
+.service__title::after {
+  content: ' ';
+  display: inline-block;
+  width: 20px;
+  margin: 0 5px;
+  border-bottom: 1px solid green;
+  height: 1px;
+}
+
+.service__text {
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: height .5s ease;
+  transition: height .5s ease;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.service span {
+  line-height: 20px;
+  letter-spacing: 0px;
+  font-weight: 100;
+}
+
+div.active {
+  height: 100px;
+}
+/*# sourceMappingURL=service.css.map */

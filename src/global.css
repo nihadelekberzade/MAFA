@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'TTFirs-Regular','Arial','sans-serif';
+    font-size: 16px;
+    line-height: 1.42;
+}
+
+
+
+img {max-width: 100%;}
+ul {list-style: none;}
+a {text-decoration: none;}
