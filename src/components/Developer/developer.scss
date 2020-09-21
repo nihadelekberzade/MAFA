@@ -1,0 +1,50 @@
+.developer {
+    position: relative;
+    height: 189px;
+    width: 270px;
+    background: red;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    
+
+    &__info {
+        background: #000;
+        color: #fff;
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        padding-left: 10px;
+
+
+        .name {
+            text-transform: uppercase;
+            letter-spacing: -0.025em;
+            font-family: 'TTFirs-Black';
+            position: relative;
+            font-size: 13px;
+            line-height: 25px;
+        }
+
+
+        .name:after {
+            content: "";
+            width: 23px;
+            height: 1px;
+            background-color: #005504;
+            position: absolute;
+            top: 50%;
+            left: -25px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__email-icon {
+        width: 20px;
+        height: 15px;
+        background: #000;
+    }
+}

@@ -7,11 +7,11 @@ export default function Home() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     let clickHandler = (index) => {
-        console.log('salam');
-        index = 3;
-        index === activeIndex ? setActiveIndex(null) : setActiveIndex(3);
+        console.log(index);
+        index === activeIndex ? setActiveIndex(null) : setActiveIndex(index);
     }
 
+    
 
     return (
         <div className='home'>
@@ -30,7 +30,7 @@ export default function Home() {
                 '
                         activeIndex={activeIndex}
                         index={0}
-                        onClick={() => clickHandler()}
+                        onClick={clickHandler}
                     />
                 </li>
                 <li>
@@ -43,7 +43,7 @@ export default function Home() {
                 '
                 activeIndex={activeIndex}
                         index={1}
-                        onClick={() => clickHandler}
+                        onClick={clickHandler}
                     />
                 </li>
                 <li>
@@ -56,7 +56,7 @@ export default function Home() {
                 '
                 activeIndex={activeIndex}
                         index={2}
-                        onClick={() => clickHandler}
+                        onClick={clickHandler}
                     />
                 </li>
                 <li>
@@ -69,7 +69,7 @@ export default function Home() {
                 '
                 activeIndex={activeIndex}
                         index={3}
-                        onClick={() => clickHandler}
+                        onClick={clickHandler}
                     />
                 </li>
                 <li>
@@ -82,7 +82,7 @@ export default function Home() {
                 '
                 activeIndex={activeIndex}
                         index={4}
-                        onClick={() => clickHandler}
+                        onClick={clickHandler}
                     />
                 </li>
             </ul>

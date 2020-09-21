@@ -1,0 +1,23 @@
+.team {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    position: fixed;
+}
+.team-members {
+    display: flex;
+    display: inline-block;
+    margin-top: 100px;
+
+
+    .members-item {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+
+    @media (min-width:768px) {
+        .members-item {flex-direction: row;}
+    }
+}
