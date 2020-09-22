@@ -1,25 +1,6 @@
 .developer {
   position: relative;
-  width: 270px;
   margin-bottom: 10px;
-}
-
-@media (min-width: 420px) {
-  .developer {
-    width: 330px;
-  }
-}
-
-@media (min-width: 580px) {
-  .developer {
-    width: 400px;
-  }
-}
-
-@media (min-width: 768px) {
-  .developer {
-    width: 500px;
-  }
 }
 
 .developer .img:hover ~ .info {

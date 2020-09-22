@@ -1,27 +1,10 @@
 .developer {
     position: relative;
-    width: 270px;
     margin-bottom: 10px;
-    
-
-
-    @media (min-width:420px) {
-        width: 330px;
-    }
-    @media (min-width:580px) {
-        width: 400px;
-    }
-    @media (min-width:768px) {
-        width: 500px;
-    }
-    
-
     
     .img:hover ~ .info {
         transform: translateX(-10px);
     }
-
-
 
     .info {
         background: #000;
@@ -44,8 +27,6 @@
             width: auto;
             footer {column-gap: 30px;}
         }
-
-
         .name {
             text-transform: uppercase;
             letter-spacing: -0.025em;
@@ -63,7 +44,6 @@
             top: 50%;
             left: -25px;
         }
-
         footer {
             display: flex;
             justify-content: space-between;
