@@ -1,19 +1,49 @@
 .developer {
     position: relative;
-    height: 189px;
     width: 270px;
-    background: red;
-    margin: 0 auto;
     margin-bottom: 10px;
     
+
+
+    @media (min-width:420px) {
+        width: 330px;
+    }
+    @media (min-width:580px) {
+        width: 400px;
+    }
+    @media (min-width:768px) {
+        width: 500px;
+    }
+    
+
+    
+    .img:hover ~ .info {
+        transform: translateX(-10px);
+    }
+
+
 
     .info {
         background: #000;
         color: #fff;
         position: absolute;
-        width: 100%;
+        left: 0;
+        right: 0;
+        height: 43px;
         bottom: 10px;
-        padding-left: 10px;
+        padding: 0 10px;
+        color: #fff;
+        position: absolute;
+        background: #000;
+        transition: transform 3s linear;
+
+        @media (min-width:768px) {
+            top: 32px;
+            left: -62px;
+            right: auto;
+            width: auto;
+            footer {column-gap: 30px;}
+        }
 
 
         .name {
@@ -24,8 +54,6 @@
             font-size: 13px;
             line-height: 25px;
         }
-
-
         .name:after {
             content: "";
             width: 23px;
@@ -39,22 +67,14 @@
         footer {
             display: flex;
             justify-content: space-between;
-
             .icon {
-                color: red;
+                color: #fff;
                 transition: transform .5s ease;
-                transform: scale(1);
             }
-            .icon:hover {
-                color: red;
-            }
-            .email {padding: 0 15px 0 10px;}
+            .icon:hover {transform: translateY(-5px) scale(1.1);}
+            .email {padding: 0 5px 0 10px;}
         }
     }
 
-    &__email-icon {
-        width: 20px;
-        height: 15px;
-        background: #000;
-    }
+    
 }

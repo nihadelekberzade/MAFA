@@ -6,7 +6,6 @@ import React from 'react'
 export default function Developer(props) {
     return (
         <div className='developer'>
-
             <img
                 src={props.src}
                 className='img'>
@@ -14,10 +13,8 @@ export default function Developer(props) {
 
             <div className='info'>
                 <div className='name'>{props.name}</div>
-
                 <footer>
                     <span className='profession'>{props.profession}</span>
-
                     <div className='social-links'>
                         <a href={props.linkedin}>
                             <i className="fab fa-linkedin-in linkedin icon"></i>
@@ -30,9 +27,6 @@ export default function Developer(props) {
 
                     </div>
                 </footer>
-
-
-
             </div>
         </div>
     )

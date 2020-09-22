@@ -1,23 +1,24 @@
 .team {
-    width: 100%;
-    height: 100vh;
-    background: #000;
     position: fixed;
-}
-.team-members {
-    display: flex;
-    display: inline-block;
-    margin-top: 100px;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
 
-
-    .members-item {
+    .team-list {
         display: flex;
-        flex-direction: column;
-        width: 100vw;
+        margin-top: 100px !important;
+        justify-content: center;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+        }
+
+        @media (min-width:1200px) {
+            .team-list__item {flex-direction: row;}
+        }
     }
 
-
-    @media (min-width:768px) {
-        .members-item {flex-direction: row;}
-    }
 }

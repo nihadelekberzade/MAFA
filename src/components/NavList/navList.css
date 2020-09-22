@@ -24,6 +24,10 @@
   transition: transform .2s, -webkit-transform .2s;
 }
 
+.nav-list.collapsed {
+  width: 0;
+}
+
 .nav-list.active li:nth-child(1n) {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
