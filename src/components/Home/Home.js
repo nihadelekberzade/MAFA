@@ -1,7 +1,11 @@
 import './home.css'
 import { images } from '../../img/images'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Service from '../Service/Service'
+
+
+
+
 
 
 
@@ -15,9 +19,9 @@ export default function Home() {
         setActive
     ] = useState(
         {
-            activeIndex: 0,
-            activeShapeImg: images.x,
-            activeShapeName: 'x'
+            activeIndex: null,
+            activeShapeImg: null,
+            activeShapeName: ''
         }
     );
 
@@ -73,23 +77,50 @@ export default function Home() {
         }
     }
 
-    let tst = () => { console.log('salam') };
+    useEffect(() => {
+        setTimeout(function(){ 
+            setActive({
+                activeIndex: 0,
+                activeShapeImg: images.x,
+                activeShapeName: 'x'
+            })
+        },2000);
+      });
+
+    
+
 
     return (
         <div className='home'>
-            <div
-                className={`shapes 
-                ${active.activeIndex == null ? 'hidden' : 'show'}`}>
-                <img
-                    className='shape-1'
+            <div className={`shapes ${active.activeIndex == null ? 'hidden' : 'show'}`}>
+                <img className='shape-1'
                     src={active.activeShapeImg}
                     alt='active shape'
                 />
+                <img className='shape-2'
+                    src={active.activeShapeImg}
+                    alt='active shape'
+                />
+                <img className='shape-3'
+                    src={active.activeShapeImg}
+                    alt='active shape'
+                />
+                <img className='shape-4'
+                    src={active.activeShapeImg}
+                    alt='active shape'
+                />
+                <img className='shape-5'
+                    src={active.activeShapeImg}
+                    alt='active shape'
+                />
+                <img className='shape-6'
+                    src={active.activeShapeImg}
+                    alt='active shape'
+                />
+
             </div>
             <ul className='home__service-list'>
-                <li
-                    onMouseOver={tst}
-                >
+                <li>
                     <Service
                         title='web-design'
                         subtitle1='Сайт — это не продукт ради продукта, а составляющая ва

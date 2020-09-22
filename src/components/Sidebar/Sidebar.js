@@ -31,6 +31,7 @@ export default function Sidebar() {
             </header>
             <NavList
             isActive={isActive}
+            onClick={toggleSidebar}
             />
             
         </div>

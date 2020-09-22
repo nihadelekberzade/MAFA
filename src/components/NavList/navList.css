@@ -16,6 +16,7 @@
 .nav-list li {
   font-size: 50px;
   line-height: 1;
+  color: #000;
   font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
   text-transform: uppercase;
   -webkit-transition: -webkit-transform .2s;

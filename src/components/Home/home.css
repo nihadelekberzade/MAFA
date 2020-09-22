@@ -23,8 +23,44 @@
   z-index: 2;
 }
 
-.home .shape-1 {
+.home .shapes img {
+  position: fixed;
+}
+
+.home .shapes .shape-1 {
   width: 300px;
+  top: -30px;
+  left: -40px;
+}
+
+.home .shapes .shape-2 {
+  width: 400px;
+  top: -30px;
+  right: -40px;
+}
+
+.home .shapes .shape-3 {
+  width: 200px;
+  bottom: -15px;
+  right: 180px;
+}
+
+.home .shapes .shape-4 {
+  width: 100px;
+  top: 40%;
+  left: 200px;
+}
+
+.home .shapes .shape-5 {
+  width: 100px;
+  top: 50%;
+  right: 400px;
+}
+
+.home .shapes .shape-6 {
+  width: 200px;
+  top: 12%;
+  left: 40%;
 }
 
 .home__service-list {

@@ -15,4 +15,4 @@ body {
 
 img {max-width: 100%;}
 ul {list-style: none;}
-a {text-decoration: none;}
+a {text-decoration: none;cursor: pointer;}
