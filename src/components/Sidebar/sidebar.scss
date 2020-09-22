@@ -1,6 +1,6 @@
 $padding:20px;
 
-@media (min-width:768px) {$padding:40px}
+
 
 .sidebar {
     width: 0;
@@ -8,7 +8,7 @@ $padding:20px;
     background: #fff;
     text-align: right;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     top: 0;
     right: 0;
     transition: width .5s ease;
@@ -18,23 +18,35 @@ $padding:20px;
     
     
     .header {
-        &__logo {
+       
+        .logo {
             width: 66px;
             height: 22.23px;
             position: fixed;
-            left: $padding;
-            top: $padding+6.685px;
+            top: 26.385px;
+            left: 20px;
         }
-        &__menu-link {
+        .menu-link {
+            position: fixed;
+            top: 20px;
+            right: 20px;
             text-transform: uppercase;
             line-height: 35.6px;
             font-size: 20px;
-            position: fixed;
-            top: $padding;
-            right: $padding;
+            
             letter-spacing: -0.025em;
             font-family: 
             'TTFirs-ExtraBold','Arial','sans-serif';
+        }
+        @media (min-width:768px) {
+            .logo {
+                top: 46.385px;
+                left: 40px;
+            }
+            .menu-link {
+                top: 40px;
+                right: 40px;
+            }
         }
     }
 

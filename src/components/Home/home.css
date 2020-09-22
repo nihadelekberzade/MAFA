@@ -1,7 +1,30 @@
 .home {
   width: 100%;
-  background: #000;
   height: 100vh;
+  background: #000;
+  position: relative;
+}
+
+@-webkit-keyframes open {
+  to {
+    height: 100vh;
+  }
+}
+
+@keyframes open {
+  to {
+    height: 100vh;
+  }
+}
+
+.home .shapes {
+  position: absolute;
+  opacity: .4;
+  z-index: 2;
+}
+
+.home .shape-1 {
+  width: 300px;
 }
 
 .home__service-list {
@@ -13,9 +36,87 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  left: 20px;
+  z-index: 2;
   top: 50%;
+  left: 20px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .home__service-list {
+    left: 55%;
+  }
+}
+
+@media (min-width: 420px) {
+  .home__service-list {
+    left: 11%;
+  }
+}
+
+@media (min-width: 768px) {
+  .home__service-list {
+    right: auto;
+    margin-left: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home__service-list {
+    margin-left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@media (width: 1024px) and (height: 1366px) {
+  .home__service-list {
+    margin-left: 350px;
+  }
+}
+
+.home .bg-img {
+  width: 320px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url("../../img/services-bg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 420px) {
+  .home .bg-img {
+    width: 370px;
+    height: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .home .bg-img {
+    height: 78.75%;
+    left: 11%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media (min-width: 1200px) {
+  .home .bg-img {
+    width: 26.5%;
+  }
+}
+
+.show {
+  display: initial;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=home.css.map */

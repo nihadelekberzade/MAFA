@@ -4,7 +4,7 @@
   background: #fff;
   text-align: right;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   right: 0;
   -webkit-transition: width .5s ease;
@@ -19,23 +19,34 @@
   color: #000 !important;
 }
 
-.sidebar .header__logo {
+.sidebar .header .logo {
   width: 66px;
   height: 22.23px;
   position: fixed;
+  top: 26.385px;
   left: 20px;
-  top: 26.685px;
 }
 
-.sidebar .header__menu-link {
-  text-transform: uppercase;
-  line-height: 35.6px;
-  font-size: 20px;
+.sidebar .header .menu-link {
   position: fixed;
   top: 20px;
   right: 20px;
+  text-transform: uppercase;
+  line-height: 35.6px;
+  font-size: 20px;
   letter-spacing: -0.025em;
   font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
+}
+
+@media (min-width: 768px) {
+  .sidebar .header .logo {
+    top: 46.385px;
+    left: 40px;
+  }
+  .sidebar .header .menu-link {
+    top: 40px;
+    right: 40px;
+  }
 }
 
 .sidebar.active {

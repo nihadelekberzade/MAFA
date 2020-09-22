@@ -18,8 +18,6 @@ export default function Service(props) {
             >
                 {props.title}
             </a>
-
-
             <div
                 className='service__text'
             >
