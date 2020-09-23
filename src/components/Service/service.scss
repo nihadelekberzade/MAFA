@@ -10,7 +10,6 @@
         line-height: 35.6px;
         letter-spacing: -0.025em;
         transition: color .5s ease;
-        margin-bottom: 5px;
         font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
 
         @media (min-width:420px) {font-size: 35.6px;}
@@ -42,12 +41,11 @@
 
 .service.active {
     .service__title {animation: neon 1.5s ease-in-out infinite alternate;}
-    .service__text {height: 90px;}
+    .service__text {
+        height: 90px;
+        margin: 7px 0;
+    }
 }
-
-
-
-
 @keyframes neon {
 	from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff,

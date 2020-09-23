@@ -17,7 +17,6 @@
   letter-spacing: -0.025em;
   -webkit-transition: color .5s ease;
   transition: color .5s ease;
-  margin-bottom: 5px;
   font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
 }
 
@@ -63,6 +62,7 @@
 
 .service.active .service__text {
   height: 90px;
+  margin: 7px 0;
 }
 
 @-webkit-keyframes neon {

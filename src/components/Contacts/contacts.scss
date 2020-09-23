@@ -55,16 +55,16 @@
 
         &_btn {
             background: #fff;
+            transition: background  .5s ease;
             margin-top: 30px;
             padding: 8px 10px;
-            transition: background  .5s linear;
             cursor: pointer;
-            
-            
         }
         &_btn:hover {
             background: transparent;
-            animation: neon 1.5s ease-in-out infinite alternate;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 
+            0 0 20px #006000, 0 0 35px #006000, 0 0 40px #006000,
+             0 0 50px #006000, 0 0 75px #006000;
             span {color: #fff;}
         }
         &_btn span {
@@ -73,7 +73,7 @@
             font-size: 20px;
             line-height: 1;
             letter-spacing: -0.025em;
-            transition: color .5s linear;
+            transition: text-shadow .5s ease;
             font-family: 'TTFirs-ExtraBold';
         }
         
