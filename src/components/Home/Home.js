@@ -15,9 +15,7 @@ export default function Home() {
             activeIndex: 0,
             activeShapeImg: images.x,
             activeShapeName: 'x'
-        },
-        setActive
-    ] = useState(
+        },setActive] = useState(
         {
             activeIndex: null,
             activeShapeImg: null,
@@ -55,13 +53,11 @@ export default function Home() {
             default:
                 break;
         }
-
         return shape;
     }
 
     let clickHandler = (index) => {
         const shape = getShape(index);
-
         if (index === active.activeIndex) {
             setActive({
                 activeIndex: null,
@@ -77,15 +73,15 @@ export default function Home() {
         }
     }
 
-    useEffect(() => {
-        setTimeout(function(){ 
-            setActive({
-                activeIndex: 0,
-                activeShapeImg: images.x,
-                activeShapeName: 'x'
-            })
-        },2000);
-      });
+    // useEffect(() => {
+    //     setTimeout(function(){ 
+    //         setActive({
+    //             activeIndex: 0,
+    //             activeShapeImg: images.x,
+    //             activeShapeName: 'x'
+    //         })
+    //     },2000);
+    //   });
 
     
 

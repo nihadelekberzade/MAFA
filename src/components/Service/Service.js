@@ -12,23 +12,16 @@ export default function Service(props) {
             className={`service 
         ${props.index === props.activeIndex ? "active" : ""}`}
         >
-            <a
-                className='service__title'
-                onClick={() => props.onClick(props.index)}
-            >
+            <a  className='service__title'
+                onClick={() => props.onClick(props.index)}>
                 {props.title}
             </a>
-            <div
-                className='service__text'
-            >
-                <span
-                    className='service__subtitle-1'
-                >
+            <div className='service__text'>
+                <span className='service__subtitle-1'>
                     {props.subtitle1}
                 </span>
                 <br />
-                <span className='service__subtitle-2'
-                >
+                <span className='service__subtitle-2'>
                     {props.subtitle2}
                 </span>
             </div>

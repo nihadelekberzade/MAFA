@@ -2,10 +2,7 @@
     position: relative;
     margin-bottom: 10px;
     
-    .img:hover ~ .info {
-        transform: translateX(-10px);
-    }
-
+    
     .info {
         background: #000;
         color: #fff;
@@ -30,7 +27,7 @@
         .name {
             text-transform: uppercase;
             letter-spacing: -0.025em;
-            font-family: 'TTFirs-Black';
+            font-family: 'TTFirs-ExtraBold';
             position: relative;
             font-size: 13px;
             line-height: 25px;
@@ -44,9 +41,17 @@
             top: 50%;
             left: -25px;
         }
+        
         footer {
             display: flex;
             justify-content: space-between;
+            position: relative;
+
+            .profession {
+                font-family: 'TTFirs-Medium','Arial','sans-serif';
+                margin-top: -7px;
+            }
+
             .icon {
                 color: #fff;
                 transition: transform .5s ease;
@@ -57,4 +62,7 @@
     }
 
     
+}
+.developer:hover > .info {
+    transform: translateX(-10px);
 }

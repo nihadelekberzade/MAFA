@@ -11,6 +11,9 @@ body {
     overflow: hidden;
     background: #000;
 }
+body::-webkit-scrollbar {
+    width: 0;               /* width of the entire scrollbar */
+}
 
 
 img {max-width: 100%;}

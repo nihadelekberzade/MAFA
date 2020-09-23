@@ -39,7 +39,7 @@
 }
 
 .contacts__info_title, .contacts__info_country {
-  font-family: 'TTFirs-ExtraBold';
+  font-family: 'TTFirs-ExtraBold','Arial','sans-serif';
 }
 
 .contacts__info_title {
@@ -72,13 +72,16 @@
   padding: 8px 10px;
   -webkit-transition: background  .5s linear;
   transition: background  .5s linear;
+  cursor: pointer;
 }
 
 .contacts__info_btn:hover {
   background: transparent;
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+          animation: neon 1.5s ease-in-out infinite alternate;
 }
 
-.contacts__info_btn:hover > span {
+.contacts__info_btn:hover span {
   color: #fff;
 }
 
@@ -152,6 +155,24 @@
     width: 32%;
     height: 70%;
     right: 4%;
+  }
+}
+
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #006000, 0 0 70px #006000, 0 0 80px #006000,  0 0 100px #006000, 0 0 150px #006000;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,  0 0 20px #006000, 0 0 35px #006000, 0 0 40px #006000, 0 0 50px #006000, 0 0 75px #006000;
+  }
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #006000, 0 0 70px #006000, 0 0 80px #006000,  0 0 100px #006000, 0 0 150px #006000;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,  0 0 20px #006000, 0 0 35px #006000, 0 0 40px #006000, 0 0 50px #006000, 0 0 75px #006000;
   }
 }
 /*# sourceMappingURL=contacts.css.map */

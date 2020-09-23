@@ -29,7 +29,8 @@
 
         &_title,
         &_country {
-            font-family: 'TTFirs-ExtraBold';
+            font-family: 
+            'TTFirs-ExtraBold','Arial','sans-serif';
         }
 
         &_title {
@@ -56,18 +57,16 @@
             background: #fff;
             margin-top: 30px;
             padding: 8px 10px;
-            
             transition: background  .5s linear;
-
+            cursor: pointer;
+            
             
         }
         &_btn:hover {
             background: transparent;
+            animation: neon 1.5s ease-in-out infinite alternate;
+            span {color: #fff;}
         }
-        &_btn:hover > span {
-            color: #fff;
-        }
-
         &_btn span {
             color: #000;
             text-transform: uppercase;
@@ -77,10 +76,7 @@
             transition: color .5s linear;
             font-family: 'TTFirs-ExtraBold';
         }
-
-
-
-
+        
 
 
 
@@ -131,5 +127,16 @@
 
     }
 
-    
+    @keyframes neon {
+        from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff,
+             0 0 40px #006000, 0 0 70px #006000, 0 0 80px #006000, 
+             0 0 100px #006000, 0 0 150px #006000;
+        }
+        to {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 
+            0 0 20px #006000, 0 0 35px #006000, 0 0 40px #006000,
+             0 0 50px #006000, 0 0 75px #006000;
+        }
+    }
 }

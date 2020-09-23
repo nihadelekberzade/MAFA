@@ -15,8 +15,6 @@
         z-index: 2;
         
         img {position: fixed;}
-
-
             // transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
             // transform: scale(1) rotate(45deg) translate(30px, 20px);
 
@@ -76,7 +74,6 @@
             margin-left: 0;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
-            
         }
         // @media (min-width:1500px) {margin-left: 350px;}
         // @media (min-width:1700px) {margin-left: 450px;}

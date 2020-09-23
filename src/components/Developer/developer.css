@@ -3,11 +3,6 @@
   margin-bottom: 10px;
 }
 
-.developer .img:hover ~ .info {
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
-}
-
 .developer .info {
   background: #000;
   color: #fff;
@@ -42,7 +37,7 @@
 .developer .info .name {
   text-transform: uppercase;
   letter-spacing: -0.025em;
-  font-family: 'TTFirs-Black';
+  font-family: 'TTFirs-ExtraBold';
   position: relative;
   font-size: 13px;
   line-height: 25px;
@@ -65,6 +60,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+}
+
+.developer .info footer .profession {
+  font-family: 'TTFirs-Medium','Arial','sans-serif';
+  margin-top: -7px;
 }
 
 .developer .info footer .icon {
@@ -82,5 +83,10 @@
 
 .developer .info footer .email {
   padding: 0 5px 0 10px;
+}
+
+.developer:hover > .info {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 /*# sourceMappingURL=developer.css.map */
