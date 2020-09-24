@@ -9,7 +9,6 @@
         display: flex;
         margin-top: 100px !important;
         justify-content: center;
-
         .item {width: 270px;}
 
         @media (min-width:420px) {
@@ -21,8 +20,6 @@
         @media (min-width:768px) {
             .item { width: 500px;}
         }
-        
-
         .column {
             display: flex;
             flex-direction: column;
@@ -31,26 +28,21 @@
             height: 612px;
             margin: 0 auto;
             position: relative;
-            
             @media (min-width:992px) {
                 row-gap: 40px;
             }
-            
-            
             @media (min-width:1200px) {
                flex-direction: row;
-
                .item {
                 position: absolute;
             }
-               
-                   .item-dimaZ {
+                   .item-dimaM {
                        width: 490px;
                        height: 343px;
                        top: 50%;
                        transform: translateY(-50%);
                     }   
-                   .item-dimaM {
+                   .item-dimaZ {
                        width: 480px;
                        height: 336px;
                        top: 38px;

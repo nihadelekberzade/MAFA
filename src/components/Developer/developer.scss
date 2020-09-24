@@ -1,8 +1,6 @@
 .developer {
     position: relative;
     margin-bottom: 10px;
-    
-    
     .info {
         background: #000;
         color: #fff;
@@ -16,10 +14,10 @@
         position: absolute;
         background: #000;
         transition: transform 3s linear;
-
         @media (min-width:768px) {
             top: 32px;
             left: -62px;
+            width: 220px !important;
             right: auto;
             width: auto;
             footer {column-gap: 30px;}
@@ -60,8 +58,6 @@
             .email {padding: 0 5px 0 10px;}
         }
     }
-
-    
 }
 .developer:hover > .info {
     transform: translateX(-10px);

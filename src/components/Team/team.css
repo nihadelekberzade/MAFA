@@ -71,14 +71,14 @@
   .team .team-list .column .item {
     position: absolute;
   }
-  .team .team-list .column .item-dimaZ {
+  .team .team-list .column .item-dimaM {
     width: 490px;
     height: 343px;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
-  .team .team-list .column .item-dimaM {
+  .team .team-list .column .item-dimaZ {
     width: 480px;
     height: 336px;
     top: 38px;

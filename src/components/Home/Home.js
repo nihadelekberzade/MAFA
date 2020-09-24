@@ -1,13 +1,7 @@
 import './home.css'
 import { images } from '../../img/images'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Service from '../Service/Service'
-
-
-
-
-
-
 
 export default function Home() {
     const [
@@ -15,13 +9,13 @@ export default function Home() {
             activeIndex: 0,
             activeShapeImg: images.x,
             activeShapeName: 'x'
-        },setActive] = useState(
-        {
-            activeIndex: null,
-            activeShapeImg: null,
-            activeShapeName: ''
-        }
-    );
+        }, setActive] = useState(
+            {
+                activeIndex: null,
+                activeShapeImg: null,
+                activeShapeName: ''
+            }
+        );
 
     let getShape = (index) => {
         let shape;
@@ -55,7 +49,6 @@ export default function Home() {
         }
         return shape;
     }
-
     let clickHandler = (index) => {
         const shape = getShape(index);
         if (index === active.activeIndex) {
@@ -72,19 +65,31 @@ export default function Home() {
             })
         }
     }
-
-    // useEffect(() => {
-    //     setTimeout(function(){ 
-    //         setActive({
-    //             activeIndex: 0,
-    //             activeShapeImg: images.x,
-    //             activeShapeName: 'x'
-    //         })
-    //     },2000);
-    //   });
-
-    
-
+    const services = [
+        {
+            title: 'web-design',
+            subtitle1: `Сайт — это не продукт ради продукта, а составляющая ва
+            шего общего бизнес-концепта.`,
+            subtitle2: `Мы понимаем это и делаем такие сайты, 
+            которые помогают сделать ваш бизнес лучше.`,
+        },
+        {
+            title: 'developing',
+            subtitle1: `Мы комплексно разрабатываем проекты с учетом особенностей вашего бизнеса. Фиксируем цены за каждый этап и не нарушаем логику разработки.`,
+            subtitle2: `Если хотите получить качественный продукт — доверьтесь нам.`,
+        },
+        {
+            title: 'branding',
+            subtitle1: `Есть бизнес-идея, но нет понимания что с ней делать дальше?`,
+            subtitle2: `Мы разработаем такую бренд-стратегию и айдентику, которая сможет донести вашу концепцию до целевой аудитории.`,
+        },
+        {
+            title: 'smm',
+            subtitle1: `Если вас нет в социальных сетях — вас не существует.
+            Мы знаем, как эффективно представить вас в Facebook и`,
+            subtitle2: `Instagram, решая ваши задачи и достигая поставленных целей.`,
+        },
+    ]
 
     return (
         <div className='home'>
@@ -116,58 +121,20 @@ export default function Home() {
 
             </div>
             <ul className='home__service-list'>
-                <li>
-                    <Service
-                        title='web-design'
-                        subtitle1='Сайт — это не продукт ради продукта, а составляющая ва
-                шего общего бизнес-концепта.'
-                        subtitle2='Мы понимаем это и делаем такие сайты, 
-                которые помогают сделать ваш бизнес лучше.'
-                        activeIndex={active.activeIndex}
-                        index={0}
-                        onClick={clickHandler}
-                    />
-                </li>
-                <li>
-                    <Service title='developing'
-                        subtitle1='
-                        Мы комплексно разрабатываем проекты с учетом особенностей вашего бизнеса. Фиксируем цены за каждый этап и не нарушаем логику разработки.
-                '
-                        subtitle2='
-                        Если хотите получить качественный продукт — доверьтесь нам.
-                '
-                        activeIndex={active.activeIndex}
-                        index={1}
-                        onClick={clickHandler}
-                    />
-                </li>
-                <li>
-                    <Service title='branding'
-                        subtitle1='
-                        Есть бизнес-идея, но нет понимания что с ней делать дальше?
-                '
-                        subtitle2='
-                        Мы разработаем такую бренд-стратегию и айдентику, которая сможет донести вашу концепцию до целевой аудитории.
-                '
-                        activeIndex={active.activeIndex}
-                        index={2}
-                        onClick={clickHandler}
-                    />
-                </li>
-                <li>
-                    <Service title='smm'
-                        subtitle1='
-                        Если вас нет в социальных сетях — вас не существует.
-                        Мы знаем, как эффективно представить вас в Facebook и
-                '
-                        subtitle2='
-                        Instagram, решая ваши задачи и достигая поставленных целей.
-                '
-                        activeIndex={active.activeIndex}
-                        index={3}
-                        onClick={clickHandler}
-                    />
-                </li>
+                {
+                    services.map((item,i) => {
+                        return(
+                            <Service
+                                    title={item.title}
+                                    subtitle1={item.subtitle1}
+                                    subtitle2={item.subtitle2}
+                                    activeIndex={active.activeIndex}
+                                    index={i}
+                                    onClick={clickHandler}
+                                />
+                        )
+                    })
+                }
             </ul>
             <div className='bg-img'></div>
         </div>

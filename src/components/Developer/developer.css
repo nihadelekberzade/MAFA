@@ -25,6 +25,7 @@
   .developer .info {
     top: 32px;
     left: -62px;
+    width: 220px !important;
     right: auto;
     width: auto;
   }

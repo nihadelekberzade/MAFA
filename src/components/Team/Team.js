@@ -3,33 +3,31 @@ import React from 'react'
 import Developer from '../Developer/Developer'
 import { images } from '../../img/images'
 
-
-
-
 export default function Team() {
-
-    // eslint-disable-next-line no-unused-vars
     const team = [
         {
-            name: 'ДМИТРИЙ МУЗЫЧКА',
+            name: 'Nihad Elekberzade',
             profession: 'head of front end',
             src: images.dimaM,
             linkedin: 'https://www.linkedin.com/in/nihad-elekberzade-550959185/',
-            email: 'elekberzadeh333@gmail.com'
+            email: 'elekberzadeh333@gmail.com',
+            className: 'dimaM'
         },
         {
             name: 'ДМИТРИЙ ЗАПИСОЧНЫЙ',
-            profession: 'head of front end',
+            profession: 'head of contextual ad',
             src: images.dimaZ,
             linkedin: 'https://www.linkedin.com/in/nihad-elekberzade-550959185/',
-            email: 'elekberzadeh333@gmail.com'
+            email: 'elekberzadeh333@gmail.com',
+            className: 'dimaZ'
         },
         {
-            name: 'ДМИТРИЙ ЗАПИСОЧНЫЙ',
-            profession: 'head of front end',
-            src: images.dimaM,
+            name: 'ЕВГЕНИЯ КУКУШКИНА',
+            profession: 'head of legal',
+            src: images.evgeniya,
             linkedin: 'https://www.linkedin.com/in/nihad-elekberzade-550959185/',
-            email: 'elekberzadeh333@gmail.com'
+            email: 'elekberzadeh333@gmail.com',
+            className: 'evgeniya'
         },
     ]
 
@@ -37,33 +35,21 @@ export default function Team() {
         <div className='team'>
             <ul className='team-list'>
                 <div className='column'>
-                    <li className='item item-dimaZ'>
-                        <Developer
-                            name='ДМИТРИЙ ЗАПИСОЧНЫЙ'
-                            profession='head of front end'
-                            src={images.dimaM}
-                            linkedin='https://www.linkedin.com/in/nihad-elekberzade-550959185/'
-                            email='elekberzadeh333@gmail.com'
-                        />
-                    </li>
-                    <li className='item item-dimaM'>
-                        <Developer
-                            name='ДМИТРИЙ ЗАПИСОЧНЫЙ'
-                            profession='head of front end'
-                            src={images.dimaZ}
-                            linkedin='https://www.linkedin.com/in/nihad-elekberzade-550959185/'
-                            email='elekberzadeh333@gmail.com'
-                        />
-                    </li>
-                    <li className='item item-evgeniya'>
-                        <Developer
-                            name='ЕВГЕНИЯ КУКУШКИНА'
-                            profession='head of front end'
-                            src={images.evgeniya}
-                            linkedin='https://www.linkedin.com/in/nihad-elekberzade-550959185/'
-                            email='elekberzadeh333@gmail.com'
-                        />
-                    </li>
+                    {
+                        team.map(item => {
+                            return (
+                                <li className={`item item-${item.className}`} >
+                                    <Developer
+                                        name={item.name}
+                                        profession={item.profession}
+                                        src={item.src}
+                                        linkedin={item.linkedin}
+                                        email={item.email}
+                                    />
+                                </li>
+                            )
+                        })
+                    }
                 </div>
             </ul>
         </div>
