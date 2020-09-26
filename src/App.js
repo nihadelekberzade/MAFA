@@ -1,5 +1,4 @@
 import React from 'react';
-import './app.css'
 import Contacts from './components/Contacts/Contacts';
 import Home from './components/Home/Home';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -13,7 +12,7 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Redirect exact from="/" to="searchDashboard" />
+          <Redirect exact from="/" to="/home" />
           <Route path='/home' component={Home} />
           <Route path='/team' component={Team} />
           <Route path='/contacts' component={Contacts} />
