@@ -12,7 +12,6 @@ export default function Contacts() {
                 <h1 className='contacts__info_title'>CONTACT</h1>
                 <h3 className='contacts__info_country'>Azerbaijan</h3>
                 <ul className='contacts__info_contact-list'>
-                    
                     <li>Baku,Hilton Business Center</li>
                     <li>1@mafactory.com.az</li>
                     <li>+994 51 314 14 41</li>
