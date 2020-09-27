@@ -4,7 +4,7 @@ import Home from './components/Home/Home';
 import Sidebar from './components/Sidebar/Sidebar';
 import Team from './components/Team/Team';
 import './global.css'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 function App() {
   
@@ -20,7 +20,6 @@ function App() {
         <Sidebar />
       </div>
     </Router>
-
   );
 }
 

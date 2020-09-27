@@ -12,8 +12,11 @@ export default function Developer(props) {
             </img>
 
             <div className='info'>
-                <div className='name'>{props.name}</div>
+                <header>
+                    <span className='name'>{props.name}</span>
+                </header>
                 <footer>
+
                     <span className='profession'>{props.profession}</span>
                     <div className='social-links'>
                         <a href={props.linkedin}>

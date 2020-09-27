@@ -8,12 +8,11 @@
   color: #fff;
   position: absolute;
   left: 0;
-  right: 0;
-  height: 43px;
   bottom: 10px;
+  width: 100%;
+  height: 43px;
   padding: 0 10px;
   color: #fff;
-  position: absolute;
   background: #000;
   -webkit-transition: -webkit-transform 3s linear;
   transition: -webkit-transform 3s linear;
@@ -25,13 +24,7 @@
   .developer .info {
     top: 32px;
     left: -62px;
-    width: 220px !important;
-    right: auto;
-    width: auto;
-  }
-  .developer .info footer {
-    -webkit-column-gap: 30px;
-            column-gap: 30px;
+    width: 250px;
   }
 }
 
@@ -44,9 +37,9 @@
   line-height: 25px;
 }
 
-.developer .info .name:after {
+.developer .info .name::before {
   content: "";
-  width: 23px;
+  width: 21px;
   height: 1px;
   background-color: #005504;
   position: absolute;
@@ -61,7 +54,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
 }
 
 .developer .info footer .profession {
