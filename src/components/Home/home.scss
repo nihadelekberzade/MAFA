@@ -1,110 +1,120 @@
 .home {
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    position: relative;
-    // animation: open 3s ease forwards;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  position: relative;
 
-    @keyframes open {
-        to {height: 100vh;}
+  @keyframes open {
+    to {
+      height: 100vh;
+    }
+  }
+
+  &__shapes {
+    position: absolute;
+    opacity: 0.4;
+    z-index: 2;
+
+    &--show > * {
+      transform: scale(1) rotate(360deg);
+    }
+    &--hidden > * {
+      transform: scale(0) rotate(-360deg);
     }
 
-    .shapes {
-        position: absolute;
-        opacity: .4;
-        z-index: 2;
-        
-        img {position: fixed;}
-            // transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            // transform: scale(1) rotate(45deg) translate(30px, 20px);
-        .shape-1 {
-            width: 300px;
-            top: -30px;
-            left: -40px;
-        }
-        .shape-2 {
-            width: 400px;
-            top: -30px;
-            right: -40px;
-        }
-        .shape-3 {
-            width: 200px;
-            bottom: -15px;
-            right: 180px;
-        }
-        .shape-4 {
-            width: 100px;
-            top: 40%;
-            left: 320px;
-        }
-        .shape-5 {
-            width: 100px;
-            top: 50%;
-            right: 400px;
-        }
-        .shape-6 {
-            width: 200px;
-            top: 12%;
-            left: 40%;
-        }
+    // transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    // transform: scale(1) rotate(45deg) translate(30px, 20px);
+  }
 
+  &__shape {
+    position: fixed;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &--1 {
+      width: 300px;
+      top: -30px;
+      left: -40px;
     }
-
-    
-
-    &__service-list {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        z-index: 2;
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
-        @media (min-width:768px) {
-            left: 55%;
-        }
-
-        @media (min-width:420px) {left: 11%;}
-        @media (min-width:768px) {
-            right: auto;
-            margin-left: 300px;
-        }
-        @media (min-width:1200px) {
-            margin-left: 0;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-        }
-        // @media (min-width:1500px) {margin-left: 350px;}
-        // @media (min-width:1700px) {margin-left: 450px;}
-        @media (width:1024px) and (height:1366px){margin-left: 350px;}
+    &--2 {
+      width: 400px;
+      top: -30px;
+      right: -40px;
     }
-    .bg-img {
-        width: 320px;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        height: 100%;
-        z-index: 1;
-        transform: translateX(-50%);
-        background: 
-        url('../../img/services-bg.jpg') center no-repeat;
-        background-size: cover;
-
-        @media (min-width:420px) {
-            width: 370px;
-            height: 90%;
-        }
-        @media (min-width:768px) {
-            height: 78.75%;
-            left: 11%;
-            transform: translateX(0);
-        }
-        @media (min-width:1200px) {
-            width: 26.5%;
-        }
+    &--3 {
+      width: 200px;
+      bottom: -15px;
+      right: 180px;
     }
-   
+    &--4 {
+      width: 100px;
+      top: 40%;
+      left: 320px;
+    }
+    &--5 {
+      width: 100px;
+      top: 50%;
+      right: 400px;
+    }
+    &--6 {
+      width: 200px;
+      top: 12%;
+      left: 40%;
+    }
+  }
+
+  &__service-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+
+    @media (min-width: 768px) {
+      left: 55%;
+    }
+    @media (min-width: 420px) {
+      left: 11%;
+    }
+    @media (min-width: 768px) {
+      right: auto;
+      margin-left: 300px;
+    }
+    @media (min-width: 1200px) {
+      margin-left: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    // @media (min-width:1500px) {margin-left: 350px;}
+    // @media (min-width:1700px) {margin-left: 450px;}
+    @media (width: 1024px) and (height: 1366px) {
+      margin-left: 350px;
+    }
+  }
+
+  &__bg-img {
+    width: 32rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 100%;
+    z-index: 1;
+    transform: translateX(-50%);
+    background: url("../../img/services-bg.jpg") center center no-repeat;
+    background-size: cover;
+
+    @media (min-width: 420px) {
+      width: 370px;
+      height: 90%;
+    }
+    @media (min-width: 768px) {
+      height: 78.75%;
+      left: 11%;
+      transform: translateX(0);
+    }
+    @media (min-width: 1200px) {
+      width: 26.5%;
+    }
+  }
 }
-
-.show {display: initial;}
-.hidden {display: none;}

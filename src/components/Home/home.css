@@ -17,47 +17,59 @@
   }
 }
 
-.home .shapes {
+.home__shapes {
   position: absolute;
-  opacity: .4;
+  opacity: 0.4;
   z-index: 2;
 }
 
-.home .shapes img {
-  position: fixed;
+.home__shapes--show > * {
+  -webkit-transform: scale(1) rotate(360deg);
+          transform: scale(1) rotate(360deg);
 }
 
-.home .shapes .shape-1 {
+.home__shapes--hidden > * {
+  -webkit-transform: scale(0) rotate(-360deg);
+          transform: scale(0) rotate(-360deg);
+}
+
+.home__shape {
+  position: fixed;
+  -webkit-transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.home__shape--1 {
   width: 300px;
   top: -30px;
   left: -40px;
 }
 
-.home .shapes .shape-2 {
+.home__shape--2 {
   width: 400px;
   top: -30px;
   right: -40px;
 }
 
-.home .shapes .shape-3 {
+.home__shape--3 {
   width: 200px;
   bottom: -15px;
   right: 180px;
 }
 
-.home .shapes .shape-4 {
+.home__shape--4 {
   width: 100px;
   top: 40%;
   left: 320px;
 }
 
-.home .shapes .shape-5 {
+.home__shape--5 {
   width: 100px;
   top: 50%;
   right: 400px;
 }
 
-.home .shapes .shape-6 {
+.home__shape--6 {
   width: 200px;
   top: 12%;
   left: 40%;
@@ -113,8 +125,8 @@
   }
 }
 
-.home .bg-img {
-  width: 320px;
+.home__bg-img {
+  width: 32rem;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -122,19 +134,19 @@
   z-index: 1;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: url("../../img/services-bg.jpg") center no-repeat;
+  background: url("../../img/services-bg.jpg") center center no-repeat;
   background-size: cover;
 }
 
 @media (min-width: 420px) {
-  .home .bg-img {
+  .home__bg-img {
     width: 370px;
     height: 90%;
   }
 }
 
 @media (min-width: 768px) {
-  .home .bg-img {
+  .home__bg-img {
     height: 78.75%;
     left: 11%;
     -webkit-transform: translateX(0);
@@ -143,16 +155,8 @@
 }
 
 @media (min-width: 1200px) {
-  .home .bg-img {
+  .home__bg-img {
     width: 26.5%;
   }
-}
-
-.show {
-  display: initial;
-}
-
-.hidden {
-  display: none;
 }
 /*# sourceMappingURL=home.css.map */
