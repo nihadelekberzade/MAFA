@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import "./sidebar.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -31,17 +29,17 @@ export default function Sidebar() {
           <img
             alt="logo"
             src={require(isActive
-              ? "../../img/logo_black.svg"
-              : "../../img/logo_white.svg")}
+              ? "../img/logo_black.svg"
+              : "../img/logo_white.svg")}
           />
         </Link>
 
-        <a
+        <h2
           className={`sidebar__toggle ${isActive ? "black" : "white"}`}
           onClick={toggleSidebar}
         >
           menu
-        </a>
+        </h2>
       </header>
 
       <ul

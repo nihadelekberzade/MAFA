@@ -1,7 +1,6 @@
-import "./team.css";
 import React from "react";
-import Developer from "../Developer/Developer";
-import { images } from "../../img/images";
+import Developer from "./Developer";
+import { images } from "../img/images";
 
 export default function Team() {
   const team = [
@@ -33,11 +32,14 @@ export default function Team() {
 
   return (
     <div className="team">
-      <ul className="team-list">
+      <ul className="list">
         <div className="column">
           {team.map((item, index) => {
             return (
-              <li className={`item item-${item.className}`} key={index}>
+              <li
+                className={`list__item list__item--${item.className}`}
+                key={index}
+              >
                 <Developer
                   name={item.name}
                   profession={item.profession}

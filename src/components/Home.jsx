@@ -1,7 +1,6 @@
-import "./home.css";
-import { images } from "../../img/images";
+import { images } from "../img/images";
 import React, { useState } from "react";
-import Service from "../Service/Service";
+import Service from "./Service";
 
 export default function Home() {
   const [
@@ -138,15 +137,16 @@ export default function Home() {
       <ul className="home__service-list">
         {services.map((item, i) => {
           return (
-            <Service
-              title={item.title}
-              subtitle1={item.subtitle1}
-              subtitle2={item.subtitle2}
-              activeIndex={active.activeIndex}
-              index={i}
-              key={i}
-              onClick={clickHandler}
-            />
+            <li className="home__service-item" key={i}>
+              <Service
+                title={item.title}
+                subtitle1={item.subtitle1}
+                subtitle2={item.subtitle2}
+                activeIndex={active.activeIndex}
+                index={i}
+                onClick={clickHandler}
+              />
+            </li>
           );
         })}
       </ul>

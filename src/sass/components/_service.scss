@@ -1,14 +1,8 @@
 .service {
   color: #fff;
 
-  &--active &__text {
-    height: 9rem;
-  }
-  &--active &__title {
-    animation: neon 1.5s ease-in-out infinite alternate;
-  }
-
   &__title {
+    display: inline-block;
     font-size: 3rem;
     line-height: 3.5rem;
     letter-spacing: -0.025em;
@@ -16,34 +10,38 @@
     font-family: "TTFirs-ExtraBold", "Arial", "sans-serif";
     backface-visibility: hidden;
 
+    &::after {
+      content: " ";
+      display: inline-block;
+      width: 2rem;
+      transition: transform 1s;
+      transform-origin: left;
+      margin: 0 5px;
+      border-bottom: 1px solid green;
+      height: 1px;
+    }
+
     &:hover {
       cursor: pointer;
       animation: neon 1.5s ease-in-out infinite alternate;
     }
-
     @media (min-width: 420px) {
       font-size: 35.6px;
     }
   }
-
-  &__title::after {
-    content: " ";
-    display: inline-block;
-    width: 20px;
-    margin: 0 5px;
-    border-bottom: 1px solid green;
-    height: 1px;
-  }
   &__text {
     overflow: hidden;
     height: 0;
-    transition: height 0.5s ease;
-    transform-origin: bottom;
+    transition: height 0.5s;
   }
-  span {
-    line-height: 2rem;
-    letter-spacing: 0px;
-    font-weight: 100;
+  &--active &__text {
+    height: 9rem;
+  }
+  &--active &__title {
+    animation: neon 1.5s ease-in-out infinite alternate;
+  }
+  &--active &__title::after {
+    transform: scaleX(1.5);
   }
 }
 

@@ -1,7 +1,12 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 html {
@@ -10,24 +15,30 @@ html {
 
 body {
   font-size: 1.6rem;
-  line-height: 1.42;
   background: #000;
   font-family: "TTFirs-Regular", "Arial", "sans-serif";
-}
-body::-webkit-scrollbar {
-  width: 0;
-}
-
-img {
-  max-width: 100%;
-  object-fit: contain;
 }
 ul,
 ol {
   list-style: none;
 }
 a {
+  color: inherit;
   display: inline-block;
   text-decoration: none;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+input {
+  font-family: inherit;
   color: inherit;
+  display: block;
+  border: none;
+}
+button {
+  outline: none;
+  border: none;
 }

@@ -1,0 +1,67 @@
+.team {
+  background: #000;
+
+  .list {
+    display: flex;
+    margin-top: 100px !important;
+    justify-content: center;
+
+    &__item {
+      width: 27rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      @media (min-width: 420px) {
+        width: 33rem;
+      }
+      @media (min-width: 580px) {
+        width: 40rem;
+      }
+      @media (min-width: 768px) {
+        width: 50rem;
+      }
+      @media (min-width: 992px) {
+        &:not(:last-child) {
+          margin-bottom: 4rem;
+        }
+      }
+      @media (min-width: 1200px) {
+        position: absolute;
+        &--dimaM {
+          width: 49rem;
+          height: 34rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &--dimaZ {
+          width: 48rem;
+          height: 33.6rem;
+          top: 3.8rem;
+          right: 4rem;
+        }
+        &--evgeniya {
+          width: 42rem;
+          height: 29.3rem;
+          bottom: 0;
+          right: 5rem;
+        }
+      }
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 98rem;
+      height: 61rem;
+      margin: 0 auto;
+      position: relative;
+
+      @media (min-width: 1200px) {
+        flex-direction: row;
+      }
+    }
+  }
+}

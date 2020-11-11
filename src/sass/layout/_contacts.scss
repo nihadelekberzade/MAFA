@@ -1,0 +1,121 @@
+.contacts {
+  &__content {
+    position: fixed;
+    color: #fff;
+    top: 10rem;
+    left: 2rem;
+
+    @media (min-width: 480px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (min-width: 768px) {
+      top: 50%;
+      left: 10%;
+      transform: translate(0, -50%);
+    }
+  }
+  &__title,
+  &__country {
+    font-family: "TTFirs-ExtraBold", "Arial", "sans-serif";
+  }
+
+  &__title {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    transition: font-size 0.5s ease;
+
+    @media (min-width: 380px) {
+      font-size: 6.5rem;
+    }
+    @media (min-width: 480px) {
+      font-size: 8rem;
+    }
+    @media (min-width: 768px) {
+      margin-bottom: 5rem;
+    }
+    @media (min-width: 992px) {
+      font-size: 9rem;
+    }
+  }
+
+  &__country {
+    font-size: 2.8rem;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    transition: font-size 0.5s ease;
+    margin-bottom: 2rem;
+    @media (min-width: 380px) {
+      font-size: 3rem;
+    }
+  }
+
+  &__btn {
+    background: #fff;
+    margin-top: 30px;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    transition: text-shadow 0.5s ease, background 0.5s ease;
+    font-family: "TTFirs-ExtraBold";
+  }
+  &__btn:hover {
+    background: transparent;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #006000,
+      0 0 35px #006000, 0 0 40px #006000, 0 0 50px #006000, 0 0 75px #006000;
+
+    color: #fff;
+  }
+  &__list {
+    margin-bottom: 3rem;
+  }
+  &__list-item {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  &__bg-img {
+    position: absolute;
+    background: url("../../img/contacts-pic.png") center no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 80%;
+    left: 50%;
+    bottom: 0;
+    opacity: 0.3;
+    z-index: 0;
+    transform: translateX(-50%);
+    transition: left 1s ease;
+
+    @media (min-width: 768px) {
+      width: 350px;
+      height: 55%;
+      left: auto;
+      right: 2%;
+      transform: translateX(0);
+      opacity: 1;
+    }
+    @media (min-width: 1200px) {
+      width: 32%;
+      height: 70%;
+      right: 4%;
+    }
+  }
+
+  @keyframes neon {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #006000,
+        0 0 70px #006000, 0 0 80px #006000, 0 0 100px #006000, 0 0 150px #006000;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #006000,
+        0 0 35px #006000, 0 0 40px #006000, 0 0 50px #006000, 0 0 75px #006000;
+    }
+  }
+}
