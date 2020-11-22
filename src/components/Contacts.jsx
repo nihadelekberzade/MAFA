@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contacts() {
   return (
-    <div className="contacts">
+    <section className="contacts">
       <div className="contacts__bg-img" />
       <div className="contacts__content">
         <h1 className="contacts__title">CONTACT</h1>
@@ -14,6 +14,6 @@ export default function Contacts() {
         </ul>
         <button className="btn contacts__btn">contact us</button>
       </div>
-    </div>
+    </section>
   );
 }

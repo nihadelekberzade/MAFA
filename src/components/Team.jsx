@@ -31,7 +31,7 @@ export default function Team() {
   ];
 
   return (
-    <div className="team">
+    <section className="team">
       <ul className="list">
         <div className="column">
           {team.map((item, index) => {
@@ -52,6 +52,6 @@ export default function Team() {
           })}
         </div>
       </ul>
-    </div>
+    </section>
   );
 }

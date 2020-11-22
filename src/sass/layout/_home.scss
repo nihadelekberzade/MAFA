@@ -1,23 +1,14 @@
 .home {
-  @keyframes open {
-    to {
-      height: 100vh;
-    }
-  }
   &__shapes {
     position: absolute;
     opacity: 0.4;
     z-index: 2;
-
     &--show > * {
       transform: scale(1) rotate(360deg);
     }
     &--hidden > * {
       transform: scale(0) rotate(-360deg);
     }
-
-    // transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    // transform: scale(1) rotate(45deg) translate(30px, 20px);
   }
   &__shape {
     position: fixed;
@@ -76,33 +67,34 @@
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
     }
-    // @media (min-width:1500px) {margin-left: 350px;}
-    // @media (min-width:1700px) {margin-left: 450px;}
-    @media (width: 1024px) and (height: 1366px) {
+    @media only screen and (width: 1024px) and (height: 1366px) {
       margin-left: 35rem;
+    }
+    @media only screen and (min-width: 1200px) {
+      margin-left: 10rem;
     }
   }
   &__bg-img {
     width: 32rem;
+    height: 100%;
     position: fixed;
     bottom: 0;
     left: 50%;
-    height: 100%;
     z-index: 1;
     transform: translateX(-50%);
     background: url("../../img/services-bg.jpg") center center no-repeat;
     background-size: cover;
 
-    @media (min-width: 420px) {
+    @media only screen and (min-width: 420px) {
       width: 37rem;
       height: 90%;
     }
-    @media (min-width: 768px) {
+    @media only screen and (min-width: 768px) {
       height: 78.75%;
       left: 11%;
       transform: translateX(0);
     }
-    @media (min-width: 1200px) {
+    @media only screen and (min-width: 1200px) {
       width: 26.5%;
     }
   }

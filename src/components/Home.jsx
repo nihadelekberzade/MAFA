@@ -94,7 +94,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="home">
+    <section className="home">
       <div
         className={`home__shapes ${
           active.activeIndex == null
@@ -151,6 +151,6 @@ export default function Home() {
         })}
       </ul>
       <div className="home__bg-img" />
-    </div>
+    </section>
   );
 }
