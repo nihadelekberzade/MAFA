@@ -535,20 +535,19 @@ button {
 
 .sidebar {
   width: 0;
-  height: 100vh !important;
+  height: 100vh;
   background: #fff;
   text-align: right;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 999;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  overflow: hidden;
+  -webkit-transition: width 0.7s;
+  transition: width 0.7s;
 }
 
 .sidebar--active {
-  width: 100%;
+  width: 100vw;
 }
 
 .sidebar--active .sidebar__toggle {
@@ -611,8 +610,9 @@ button {
           transform: translateY(-50%);
 }
 
-.nav-list--collapsed {
-  width: 0;
+.nav-list--collapsed li {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .nav-list li {
@@ -621,10 +621,20 @@ button {
   color: #000;
   font-family: "TTFirs-ExtraBold", "Arial", "sans-serif";
   text-transform: uppercase;
-  -webkit-transition: font-size 0.5s ease, -webkit-transform 0.2s;
-  transition: font-size 0.5s ease, -webkit-transform 0.2s;
-  transition: transform 0.2s, font-size 0.5s ease;
-  transition: transform 0.2s, font-size 0.5s ease, -webkit-transform 0.2s;
+  -webkit-transition: font-size 0.5s ease, -webkit-transform 0.3s;
+  transition: font-size 0.5s ease, -webkit-transform 0.3s;
+  transition: transform 0.3s, font-size 0.5s ease;
+  transition: transform 0.3s, font-size 0.5s ease, -webkit-transform 0.3s;
+}
+
+.nav-list li:nth-child(2) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav-list li:nth-child(3) {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
 }
 
 .nav-list li:hover {

@@ -2,7 +2,7 @@ import { images } from "../img/images";
 import React, { useState } from "react";
 import Service from "./Service";
 
-export default function Home() {
+ function Home() {
   const [
     active = {
       activeIndex: 0,
@@ -154,3 +154,4 @@ export default function Home() {
     </section>
   );
 }
+export default Home;

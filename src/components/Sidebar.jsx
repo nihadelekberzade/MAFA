@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Sidebar() {
+ function Sidebar() {
   const [isActive, setActive] = useState(false);
   let toggleSidebar = () => {
     setActive(!isActive);
   };
-
   const links = [
     {
       text: "home",
@@ -21,7 +20,6 @@ export default function Sidebar() {
       link: "/contacts",
     },
   ];
-
   return (
     <nav className={`sidebar ${isActive ? "sidebar--active" : ""}`}>
       <header className="sidebar__header">
@@ -58,3 +56,4 @@ export default function Sidebar() {
     </nav>
   );
 }
+export default Sidebar;

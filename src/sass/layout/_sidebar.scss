@@ -1,23 +1,20 @@
 $padding: 2rem;
 .sidebar {
   width: 0;
-  height: 100vh !important;
+  height: 100vh;
   background: #fff;
   text-align: right;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 999;
-  transition: width 0.3s ease;
-  overflow: hidden;
-
+  transition: width 0.7s;
   &--active {
-    width: 100%;
+    width: 100vw;
   }
   &--active &__toggle {
     color: #000;
   }
-
   &__toggle {
     position: fixed;
     top: 2rem;
@@ -28,7 +25,6 @@ $padding: 2rem;
     letter-spacing: -0.025em;
     font-family: "TTFirs-ExtraBold", "Arial", "sans-serif";
     color: #fff;
-
     &:hover {
       cursor: pointer;
     }
@@ -62,7 +58,9 @@ $padding: 2rem;
   transform: translateY(-50%);
 
   &--collapsed {
-    width: 0;
+    li {
+      transform: translateX(100%);
+    }
   }
 
   li {
@@ -71,7 +69,14 @@ $padding: 2rem;
     color: #000;
     font-family: "TTFirs-ExtraBold", "Arial", "sans-serif";
     text-transform: uppercase;
-    transition: transform 0.2s, font-size 0.5s ease;
+    transition: transform 0.3s, font-size 0.5s ease;
+
+    &:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.15s;
+    }
 
     &:hover {
       background: #000;

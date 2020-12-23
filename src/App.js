@@ -1,15 +1,16 @@
 import React from "react";
-import Contacts from "./components/Contacts";
-import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
-import Team from "./components/Team";
 import "./sass/css/style.css";
+
 import {
   HashRouter as Router,
   Switch,
   Route,
   Redirect,
 } from "react-router-dom";
+import Home from "./components/Home";
+import Team from "./components/Team";
+import Contacts from "./components/Contacts";
 
 function App() {
   return (
@@ -24,5 +25,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
