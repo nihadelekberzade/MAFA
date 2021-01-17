@@ -2,7 +2,7 @@ import { images } from "../img/images";
 import React, { useState } from "react";
 import Service from "./Service";
 
- function Home() {
+function Home() {
   const [
     active = {
       activeIndex: 0,
@@ -95,43 +95,13 @@ import Service from "./Service";
 
   return (
     <section className="home">
-      <div
-        className={`home__shapes ${
-          active.activeIndex == null
-            ? "home__shapes--hidden"
-            : "home__shapes--show"
-        }`}
-      >
-        <img
-          className="home__shape home__shape--1"
-          src={active.activeShapeImg}
-          alt="active shape"
-        />
-        <img
-          className="home__shape home__shape--2"
-          src={active.activeShapeImg}
-          alt="active shape"
-        />
-        <img
-          className="home__shape home__shape--3"
-          src={active.activeShapeImg}
-          alt="active shape"
-        />
-        <img
-          className="home__shape home__shape--4"
-          src={active.activeShapeImg}
-          alt="active shape"
-        />
-        <img
-          className="home__shape home__shape--5"
-          src={active.activeShapeImg}
-          alt="active shape"
-        />
-        <img
-          className="home__shape home__shape--6"
-          src={active.activeShapeImg}
-          alt="active shape"
-        />
+      <div className={`home__shapes ${active.activeIndex == null ? "home__shapes--hidden" : "home__shapes--show"}`}>
+        <img className="home__shape home__shape--1" src={active.activeShapeImg} alt="active shape" />
+        <img className="home__shape home__shape--2" src={active.activeShapeImg} alt="active shape" />
+        <img className="home__shape home__shape--3" src={active.activeShapeImg} alt="active shape" />
+        <img className="home__shape home__shape--4" src={active.activeShapeImg} alt="active shape" />
+        <img className="home__shape home__shape--5" src={active.activeShapeImg} alt="active shape" />
+        <img className="home__shape home__shape--6" src={active.activeShapeImg} alt="active shape" />
       </div>
 
       <ul className="home__service-list">
