@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "./components/Sidebar";
-import "./sass/css/style.css";
+import "./sass/css/style.min.css";
 
 import {
   HashRouter as Router,
@@ -12,7 +12,7 @@ import Home from "./components/Home";
 import Team from "./components/Team";
 import Contacts from "./components/Contacts";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>

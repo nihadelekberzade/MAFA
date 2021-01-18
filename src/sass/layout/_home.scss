@@ -13,7 +13,6 @@
   &__shape {
     position: fixed;
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-
     &--1 {
       width: 300px;
       top: -30px;
@@ -51,7 +50,6 @@
     top: 50%;
     left: 2rem;
     transform: translateY(-50%);
-
     @media (min-width: 768px) {
       left: 55%;
     }
@@ -70,9 +68,9 @@
     @media only screen and (width: 1024px) and (height: 1366px) {
       margin-left: 35rem;
     }
-    @media only screen and (min-width: 1200px) {
-      margin-left: 10rem;
-    }
+  }
+  &__service-item {
+    max-width: 400px;
   }
   &__bg-img {
     width: 32rem;
