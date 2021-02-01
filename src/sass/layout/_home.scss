@@ -3,7 +3,7 @@
     position: absolute;
     opacity: 0.4;
     z-index: 2;
-    &--show > * {
+    &--show &__sshape {
       transform: scale(1) rotate(360deg);
     }
     &--hidden > * {
@@ -80,7 +80,7 @@
     left: 50%;
     z-index: 1;
     transform: translateX(-50%);
-    background: url("../../img/services-bg.jpg") center center no-repeat;
+    background: url("../../img/services-bg.jpg") center no-repeat;
     background-size: cover;
 
     @media only screen and (min-width: 420px) {

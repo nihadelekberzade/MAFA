@@ -41,12 +41,3 @@
     transform: scaleX(1.4);
   }
 }
-
-@keyframes neon {
-  from {
-    text-shadow: 0 0 1rem #fff, 0 0 20px #fff, 0 0 3rem #fff, 0 0 4rem #006000, 0 0 7rem #006000, 0 0 8rem #006000, 0 0 10rem #006000, 0 0 15rem #006000;
-  }
-  to {
-    text-shadow: 0 0 0.5rem #fff, 0 0 1rem #fff, 0 0 1.5rem #fff, 0 0 2rem #006000, 0 0 3.5rem #006000, 0 0 4rem #006000, 0 0 5rem #006000, 0 0 7.5rem #006000;
-  }
-}

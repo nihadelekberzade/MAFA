@@ -2,7 +2,7 @@ $padding: 2rem;
 .sidebar {
   width: 0;
   height: 100vh;
-  background: #fff;
+  background-color: #fff;
   text-align: right;
   position: fixed;
   top: 0;
@@ -10,7 +10,7 @@ $padding: 2rem;
   z-index: 999;
   transition: width 0.7s;
   &--active {
-    width: 100vw;
+    width: 100%;
   }
   &--active &__toggle {
     color: #000;
@@ -50,9 +50,7 @@ $padding: 2rem;
   }
 }
 .nav-list {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
+  position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -77,9 +75,8 @@ $padding: 2rem;
     &:nth-child(3) {
       transition-delay: 0.15s;
     }
-
     &:hover {
-      background: #000;
+      background-color: #000;
       color: #fff;
     }
     @media (min-width: 480px) {

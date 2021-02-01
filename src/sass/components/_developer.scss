@@ -1,10 +1,8 @@
 .developer {
   position: relative;
-
   &:hover &__info {
     transform: translateX(-10px);
   }
-
   &__info {
     background: #000;
     color: #fff;
@@ -21,18 +19,16 @@
       width: 250px;
     }
   }
-
   &__name {
     text-transform: uppercase;
-    letter-spacing: -0.025em;
-    font-family: "TTFirs-ExtraBold";
+    letter-spacing: -0.25px;
+    font-family: "TTFirs-ExtraBold", Arial, Helvetica, sans-serif;
     position: relative;
-    font-size: 1.3rem;
-    line-height: 2.5rem;
-
+    font-size: 13px;
+    line-height: 25px;
     &::before {
       content: "";
-      width: 2.1rem;
+      width: 21px;
       height: 1px;
       background-color: #005504;
       position: absolute;
@@ -44,7 +40,6 @@
     font-family: "TTFirs-Medium", "Arial", "sans-serif";
     margin-top: -7px;
   }
-
   &__footer {
     display: flex;
     align-items: center;
