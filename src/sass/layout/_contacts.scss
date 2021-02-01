@@ -79,7 +79,9 @@
 
   &__bg-img {
     position: absolute;
-    background-image: url("../../img/contacts-pic.png") center no-repeat;
+    background-image: url("../../img/contacts-pic.png");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     width: 90%;
     height: 80%;
