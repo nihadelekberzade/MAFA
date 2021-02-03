@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Sidebar from "./components/Sidebar";
 import "./sass/css/style.min.css";
 
@@ -8,21 +8,23 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Home from "./components/Home";
-import Team from "./components/Team";
-import Contacts from "./components/Contacts";
 
-const App = () => {
-  return (
-    <Router>
-      <Switch>
+const Home = lazy(() => import('./components/Home'));
+const Team = lazy(() => import('./components/Team'));
+const Contacts = lazy(() => import('./components/Contacts'));
+
+const App = () => (
+  <Router>
+    <Switch>
+      <Suspense fallback={<div>Loading...</div>}>
         <Redirect exact from="/" to="/home" />
         <Route path="/home" component={Home} />
         <Route path="/team" component={Team} />
         <Route path="/contacts" component={Contacts} />
-      </Switch>
-      <Sidebar />
-    </Router>
-  );
-}
+        <Route component={() => <div>not found</div>} />
+      </Suspense>
+    </Switch>
+    <Sidebar />
+  </Router>
+);
 export default App;

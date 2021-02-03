@@ -2,7 +2,7 @@ import { images } from "../img/images";
 import React, { useState } from "react";
 import Service from "./Service";
 
-function Home() {
+const Home = () => {
   const [
     active = {
       activeIndex: 0,
@@ -16,7 +16,7 @@ function Home() {
     activeShapeName: "",
   });
 
-  let getShape = (index) => {
+  const getShape = (index) => {
     let shape;
     switch (index) {
       case 0:
@@ -49,7 +49,7 @@ function Home() {
     return shape;
   };
 
-  let clickHandler = (index) => {
+  const clickHandler = (index) => {
     if (index === active.activeIndex) {
       setActive({
         activeIndex: null,
@@ -103,25 +103,22 @@ function Home() {
         <img className="home__shape home__shape--5" src={active.activeShapeImg} alt="active shape" />
         <img className="home__shape home__shape--6" src={active.activeShapeImg} alt="active shape" />
       </div>
-
       <ul className="home__service-list">
-        {services.map((item, i) => {
-          return (
-            <li className="home__service-item" key={i}>
-              <Service
-                title={item.title}
-                subtitle1={item.subtitle1}
-                subtitle2={item.subtitle2}
-                activeIndex={active.activeIndex}
-                index={i}
-                onClick={clickHandler}
-              />
-            </li>
-          );
-        })}
+        {services.map((item, i) => (
+          <li className="home__service-item" key={i}>
+            <Service
+              title={item.title}
+              subtitle1={item.subtitle1}
+              subtitle2={item.subtitle2}
+              activeIndex={active.activeIndex}
+              index={i}
+              onClick={clickHandler}
+            />
+          </li>
+        ))}
       </ul>
       <div className="home__bg-img" />
     </section>
   );
-}
+};
 export default Home;
