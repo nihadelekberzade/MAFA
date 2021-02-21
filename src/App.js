@@ -21,7 +21,6 @@ const App = () => (
         <Route path="/home" component={Home} />
         <Route path="/team" component={Team} />
         <Route path="/contacts" component={Contacts} />
-        <Route component={() => <div>not found</div>} />
       </Suspense>
     </Switch>
     <Sidebar />

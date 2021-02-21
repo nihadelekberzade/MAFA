@@ -1,51 +1,48 @@
-$padding: 2rem;
 .sidebar {
+  position: fixed;
   width: 0;
   height: 100vh;
   background-color: #fff;
   text-align: right;
-  position: fixed;
   top: 0;
   right: 0;
   z-index: 999;
   transition: width 0.7s;
   &--active {
-    width: 100%;
+    width: 100vw;
   }
   &--active &__toggle {
     color: #000;
   }
-  &__toggle {
+  &__header {
     position: fixed;
-    top: 2rem;
-    right: 4rem;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: 768px) {
+      padding: 40px;
+    }
+  }
+  &__toggle {
     text-transform: uppercase;
-    line-height: 35.6px;
     font-size: 2rem;
     letter-spacing: -0.025em;
-    font-family: "TTFirs-ExtraBold", "Arial", "sans-serif";
     color: #fff;
     &:hover {
       cursor: pointer;
     }
     @media (min-width: 768px) {
       font-size: 3rem;
-      top: 4rem;
-      right: 6rem;
     }
   }
-  .logo {
-    width: 6.6rem;
-    height: 22.23px;
-    position: fixed;
-    top: 2.6385rem;
-    left: 2rem;
-
+  &__logo {
+    width: 66px;
     @media (min-width: 768px) {
       width: 11rem;
-      height: 3.5rem;
-      top: 4rem;
-      left: 4rem;
     }
   }
 }
@@ -54,26 +51,20 @@ $padding: 2rem;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-
-  &--collapsed {
-    li {
-      transform: translateX(100%);
-    }
-  }
-
+  transition: all 0.7s;
+  opacity: 0;
+  visibility: hidden;
   li {
     font-size: 5rem;
-    line-height: 1;
     color: #000;
-    font-family: "TTFirs-ExtraBold", "Arial", "sans-serif";
     text-transform: uppercase;
-    transition: transform 0.3s, font-size 0.5s ease;
-
+    transition: transform 0.5s;
+    transform: translateX(100%);
     &:nth-child(2) {
       transition-delay: 0.1s;
     }
     &:nth-child(3) {
-      transition-delay: 0.15s;
+      transition-delay: 0.2s;
     }
     &:hover {
       background-color: #000;
@@ -84,25 +75,19 @@ $padding: 2rem;
     }
     @media (min-width: 768px) {
       font-size: 9rem;
-      line-height: 12.2rem;
     }
     @media (min-width: 992) {
       font-size: 10rem;
     }
     @media (min-width: 1100px) {
-      font-size: 11.1rem;
+      font-size: 11rem;
     }
   }
-}
-
-@for $i from 1 through 3 {
-  .nav-list.active li:nth-child(#{$i}n) {
-    transition-delay: #{$i * 0.1s};
-    transform: translateX(0);
-  }
-}
-@for $i from 1 through 3 {
-  .nav-list.collapsed li:nth-child(#{$i}n) {
-    transform: translateX(100%);
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    li {
+      transform: translateX(0);
+    }
   }
 }

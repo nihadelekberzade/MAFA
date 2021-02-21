@@ -1,23 +1,20 @@
 .service {
-  color: #fff;
   &__title {
     display: inline-block;
     font-size: 3rem;
     line-height: 3.5rem;
     letter-spacing: -0.025em;
     transition: color 0.5s ease;
-    font-family: "TTFirs-ExtraBold", "Arial", "sans-serif";
     backface-visibility: hidden;
     &::after {
-      content: " ";
+      content: "";
       display: inline-block;
       width: 20px;
-      margin-left: 10px;
+      margin-left: 5px;
       transition: transform 0.5s;
       border-bottom: 1px solid green;
-      transform-origin: center;
+      transform-origin: left;
     }
-
     &:hover {
       cursor: pointer;
       animation: neon 1.5s ease-in-out infinite alternate;
@@ -26,13 +23,16 @@
       font-size: 35.6px;
     }
   }
-  &__text {
+  &__text-wrapper {
     overflow: hidden;
-    height: 0;
-    transition: height 0.5s;
+    height: 0px;
+    transition: height 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  &--active &__text {
-    height: 9rem;
+  &--active &__text-wrapper {
+    height: 120px;
   }
   &--active &__title {
     animation: neon 1.5s ease-in-out infinite alternate;

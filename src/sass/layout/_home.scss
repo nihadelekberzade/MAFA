@@ -50,6 +50,7 @@
     top: 50%;
     left: 2rem;
     transform: translateY(-50%);
+    max-width: 400px;
     @media (min-width: 768px) {
       left: 55%;
     }
@@ -69,9 +70,6 @@
       margin-left: 35rem;
     }
   }
-  &__service-item {
-    max-width: 400px;
-  }
   &__bg-img {
     width: 32rem;
     height: 100%;
@@ -82,7 +80,6 @@
     transform: translateX(-50%);
     background: url("../../img/services-bg.jpg") center no-repeat;
     background-size: cover;
-
     @media only screen and (min-width: 420px) {
       width: 37rem;
       height: 90%;

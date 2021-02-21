@@ -12,12 +12,18 @@ html {
   font-size: 62.5%;
 }
 body {
+  line-height: 1;
   font-size: 1.6rem;
-  background: #000;
-  font-family: "TTFirs-Regular", "Arial", "sans-serif";
+  font-family: "Allerta Stencil", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+p {
+  line-height: 1.4;
 }
 ul,
-ol {
+ol,
+li {
   list-style: none;
 }
 a {
@@ -26,9 +32,9 @@ a {
   text-decoration: none;
 }
 img {
+  display: block;
   max-width: 100%;
   object-fit: contain;
-  display: block;
 }
 input {
   font-family: inherit;
@@ -37,6 +43,8 @@ input {
   border: none;
 }
 button {
+  display: block;
   outline: none;
   border: none;
+  font-family: inherit;
 }

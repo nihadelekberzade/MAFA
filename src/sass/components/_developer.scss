@@ -22,10 +22,10 @@
   &__name {
     text-transform: uppercase;
     letter-spacing: -0.25px;
-    font-family: "TTFirs-ExtraBold", Arial, Helvetica, sans-serif;
     position: relative;
     font-size: 13px;
     line-height: 25px;
+    font-weight: 700;
     &::before {
       content: "";
       width: 21px;
@@ -37,13 +37,11 @@
     }
   }
   &__profession {
-    font-family: "TTFirs-Medium", "Arial", "sans-serif";
     margin-top: -7px;
   }
   &__footer {
     display: flex;
     align-items: center;
-    line-height: 100%;
   }
   &__link {
     &--linkedin {

@@ -15,7 +15,6 @@ const Home = () => {
     activeShapeImg: null,
     activeShapeName: "",
   });
-
   const getShape = (index) => {
     let shape;
     switch (index) {
@@ -48,7 +47,6 @@ const Home = () => {
     }
     return shape;
   };
-
   const clickHandler = (index) => {
     if (index === active.activeIndex) {
       setActive({
@@ -65,7 +63,6 @@ const Home = () => {
       });
     }
   };
-
   // list of services
   const services = [
     {
