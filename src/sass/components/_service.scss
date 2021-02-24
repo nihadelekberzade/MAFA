@@ -32,7 +32,10 @@
     justify-content: center;
   }
   &--active &__text-wrapper {
-    height: 120px;
+    height: 160px;
+    @media only screen and (min-width: 400px) {
+      height: 120px;
+    }
   }
   &--active &__title {
     animation: neon 1.5s ease-in-out infinite alternate;
