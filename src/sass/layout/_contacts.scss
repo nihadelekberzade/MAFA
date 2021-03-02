@@ -67,9 +67,7 @@
   }
   &__bg-img {
     position: absolute;
-    background-image: url("../../img/contacts-pic.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../../img/contacts-pic.webp") no-repeat center center;
     background-size: cover;
     width: 90%;
     height: 80%;
