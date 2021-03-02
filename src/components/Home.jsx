@@ -64,6 +64,7 @@ const Home = () => {
           shapeImg: images.c,
           shapeName: "c",
         };
+        break;
       case 4:
         shape = {
           shapeImg: images.x,
