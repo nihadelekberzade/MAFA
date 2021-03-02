@@ -17,10 +17,10 @@ const App = () => (
   <Router>
     <Switch>
       <Suspense fallback={<div>Loading...</div>}>
-        <Redirect exact from="/" to="/home" />
         <Route path="/home" component={Home} />
         <Route path="/team" component={Team} />
         <Route path="/contacts" component={Contacts} />
+        <Redirect exact from="/" to="/home" />
       </Suspense>
     </Switch>
     <Sidebar />

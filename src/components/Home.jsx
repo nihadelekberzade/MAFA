@@ -1,8 +1,31 @@
 import { images } from "../img/images";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Service from "./Service";
 
 const Home = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      document.querySelector(".service__title").style.textShadow = `
+    0 0 5px #fff, 
+    0 0 1rem #fff, 
+    0 0 15px #fff, 
+    0 0 20px #006000, 
+    0 0 35px #006000, 
+    0 0 40px #006000, 
+    0 0 50px #006000, 
+    0 0 75px #006000`;
+    }, 300);
+    setTimeout(() => {
+      document.querySelector(".service__title").style.textShadow = "none";
+    }, 600);
+    setTimeout(() => {
+      setActive({
+        activeIndex: 0,
+        activeShapeImg: images.x,
+        activeShapeName: "x",
+      });
+    }, 1200);
+  }, []);
   const [
     active = {
       activeIndex: 0,
@@ -40,6 +63,11 @@ const Home = () => {
         shape = {
           shapeImg: images.c,
           shapeName: "c",
+        };
+      case 4:
+        shape = {
+          shapeImg: images.x,
+          shapeName: "x",
         };
         break;
       default:
@@ -87,6 +115,11 @@ const Home = () => {
       subtitle1: `Если вас нет в социальных сетях — вас не существует.
             Мы знаем, как эффективно представить вас в Facebook и`,
       subtitle2: `Instagram, решая ваши задачи и достигая поставленных целей.`,
+    },
+    {
+      title: "contextual advertising",
+      subtitle1: `Представьте идеальный мир, в котором вы видите только ту рекламу, которая вам интересна.`,
+      subtitle2: `Это не сон, это — Contextual advertising, одна из самых эффективных вариаций продвижения вашего бизнеса.`,
     },
   ];
 
