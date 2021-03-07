@@ -14,17 +14,17 @@ const Home = () => {
     0 0 40px #006000, 
     0 0 50px #006000, 
     0 0 75px #006000`;
-    }, 300);
+    }, 600);
     setTimeout(() => {
       document.querySelector(".service__title").style.textShadow = "none";
-    }, 600);
+    }, 900);
     setTimeout(() => {
       setActive({
         activeIndex: 0,
         activeShapeImg: images.x,
         activeShapeName: "x",
       });
-    }, 1200);
+    }, 1500);
   }, []);
   const [
     active = {
@@ -92,7 +92,6 @@ const Home = () => {
       });
     }
   };
-  // list of services
   const services = [
     {
       title: "web-design",
@@ -113,9 +112,8 @@ const Home = () => {
     },
     {
       title: "smm",
-      subtitle1: `Если вас нет в социальных сетях — вас не существует.
-            Мы знаем, как эффективно представить вас в Facebook и`,
-      subtitle2: `Instagram, решая ваши задачи и достигая поставленных целей.`,
+      subtitle1: `Если вас нет в социальных сетях — вас не существует.`,
+      subtitle2: `Мы знаем, как эффективно представить вас в Facebook и Instagram, решая ваши задачи и достигая поставленных целей.`,
     },
     {
       title: "contextual advertising",
@@ -126,6 +124,9 @@ const Home = () => {
 
   return (
     <section className="home">
+      <div className="overlay">
+        <h1 className="overlay__text">MAFA</h1>
+      </div>
       <div className={`home__shapes ${active.activeIndex == null ? "home__shapes--hidden" : "home__shapes--show"}`}>
         <img className="home__shape home__shape--1" src={active.activeShapeImg} alt="active shape" />
         <img className="home__shape home__shape--2" src={active.activeShapeImg} alt="active shape" />
